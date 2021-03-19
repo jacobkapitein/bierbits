@@ -1,0 +1,71 @@
+body {
+    background-color: #678efb;
+}
+
+div.kouwekast {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    min-width: 795px;
+    min-height: 685px;
+}
+
+.koelkassie {
+    max-height: 70vh;
+    max-width: 90vw;
+    min-width: 795px;
+    min-height: 685px;
+}
+
+.bierfleswrap {
+    position: absolute;
+    /* background-color: #ff000022; */
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    min-width: 795px;
+    min-height: 685px;
+}
+
+.vreugdewater {
+    position: relative;
+    height: 17%;
+    width: 4.2%;
+}
+
+
+
+/* body {
+    background-color: #678efb;
+}
+
+div.kouwekast {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.koelkassie {
+    max-height: 70vh;
+    max-width: 90vw;
+}
+
+.bierfleswrap {
+    position: absolute;
+    background-color: #ff000022;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+}
+
+.vreugdewater {
+    position: relative;
+    height: 10vh;
+    width: 3vh;
+} */

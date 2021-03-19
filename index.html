@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Bierbits</title>
+        <link rel="stylesheet" href="stylesheet.css" />
+        <script src="jquery-3.6.0.min.js"></script>
+    </head>
+    <body>
+        <h1>Bierbits</h1>
+        <div class="kouwekast">
+            <img class="koelkassie" src="images/koelkast_open.png" />
+            <div id="1" class="bierfleswrap">
+            </div>
+            <div id="2" class="bierfleswrap">
+            </div>
+            <div id="3" class="bierfleswrap">
+            </div>
+        </div>
+
+        <script>
+            const addVreugdewater = () => {
+                let rotation = (Math.random() * (2.0000 - -2.0000) + -2.0000).toFixed(4);
+
+                if($("#1 .vreugdewater").length !== 8){
+                    // Get a random value for top spacing
+                    let top = (Math.random() * (13.000 - 12.000) + 13.0000).toFixed(4);
+                    $("#1").append(`<img class="vreugdewater" src="images/bierflesje.png" style="left: 11%; top: ${top}%; transform: rotate(${rotation}deg)" />`);
+                    if($("#1 .vreugdewater").length === 8) console.log("Eerste rij VOL!!!");
+                } else if($("#2 .vreugdewater").length !== 8){
+                    let top = (Math.random() * (36.000 - 34.000) + 34.0000).toFixed(4);
+                    $("#2").append(`<img class="vreugdewater" src="images/bierflesje.png" style="left: 11%; top: ${top}%; transform: rotate(${rotation}deg)" />`);
+                    if($("#2 .vreugdewater").length === 8) console.log("Tweede rij stampend VOL!!!");
+                } else if($("#3 .vreugdewater").length !== 8){
+                    let top = (Math.random() * (58.000 - 56.000) + 56.0000).toFixed(4);
+                    $("#3").append(`<img class="vreugdewater" src="images/bierflesje.png" style="left: 11%; top: ${top}%; transform: rotate(${rotation}deg)" />`);
+                    if($("#3 .vreugdewater").length === 8) console.log("DE HELE KOELKAST IS KLAAR VOOR WEEKEND!!!");
+                }
+            }
+            
+        </script>
+    </body>
+</html>
