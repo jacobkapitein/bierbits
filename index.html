@@ -8,8 +8,9 @@
     </head>
     <body>
         <h1>Wil je bier?</h1>
+        <p>Klik op de koelkast</p>
         <div class="kouwekast">
-            <div class="open" style="display: none;">
+            <div class="open" style="display: none;" onmousedown="onClickOpen()" >
                 <img class="koelkassie" src="images/koelkast_open.png" />
                 <div id="1" class="bierfleswrap">
                 </div>
@@ -18,7 +19,7 @@
                 <div id="3" class="bierfleswrap">
                 </div>
             </div>
-            <div class="dicht" onmouseover="onHoverDicht()" onmousedown="onHoverDicht()" >
+            <div class="dicht" onmousedown="onClickDicht()" >
                 <img class="koelkassieDicht" src="images/koelkast_dicht.png" />
             </div>
         </div>

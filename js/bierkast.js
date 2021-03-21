@@ -42,7 +42,12 @@ const addVreugdewater = () => {
     }
 }
 
-const onHoverDicht = () => {
+const onClickDicht = () => {
     $(".dicht").css('display', 'none');
     $(".open").css('display', 'block');
+}
+
+const onClickOpen = () => {
+    $(".dicht").css('display', 'block');
+    $(".open").css('display', 'none');
 }
