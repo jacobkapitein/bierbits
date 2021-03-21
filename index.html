@@ -9,6 +9,7 @@
     <body>
         <h1>Wil je bier?</h1>
         <p>Klik op de koelkast</p>
+        <p>Volgende bier over <b id="uren"></b>:<b id="minuten"></b>:<b id="seconden"></b></p>
         <div class="kouwekast">
             <div class="open" style="display: none;" onmousedown="onClickOpen()" >
                 <img class="koelkassie" src="images/koelkast_open.png" />
@@ -27,6 +28,9 @@
         <script>
             kouwekastBeheer();
             setInterval(() => kouwekastBeheer(), 1000);
+
+            bierTimer();
+            setInterval(() => bierTimer(), 1000);
         </script>
     </body>
 </html>

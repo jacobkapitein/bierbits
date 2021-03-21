@@ -1,10 +1,39 @@
 const kouwekastBeheer = () => {
-    hoeveelBierMoetenWe = hoeveelBierMoetErIn();
-    enWatZitErIn = enHoeveelZitErAlIn();
+    const hoeveelBierMoetenWe = hoeveelBierMoetErIn();
+    const enWatZitErIn = enHoeveelZitErAlIn();
 
     for(let i = 0; i < hoeveelBierMoetenWe - enWatZitErIn; i++){
         addVreugdewater();
     }
+}
+
+const bierTimer = () => {
+    const volgendeBierOverHoelang = volgendeBierOver();
+
+    // uren
+    let volgendeUren = Math.floor(volgendeBierOverHoelang / 60 / 60 % 60)
+    if (volgendeUren.toString().length === 1) volgendeUren = `0${volgendeUren}`;
+    $("#uren").text(volgendeUren);
+
+    // minuten
+    let volgendeMinuten = Math.floor(volgendeBierOverHoelang / 60 % 60)
+    if (volgendeMinuten.toString().length === 1) volgendeMinuten = `0${volgendeMinuten}`;
+    $("#minuten").text(volgendeMinuten);
+
+    // seconden
+    let volgendeSeconden = Math.floor(volgendeBierOverHoelang % 60)
+    if (volgendeSeconden.toString().length === 1) volgendeSeconden = `0${volgendeSeconden}`;
+    $("#seconden").text(volgendeSeconden);
+}
+
+const volgendeBierOver = () => {
+    const current_time = Math.floor(Date.now() / 1000);
+    const week_duration = 604800;
+    const vreugdewater_time = 25200;
+    const total_time = week_duration + vreugdewater_time;
+    const time_passed = (current_time % vreugdewater_time) + week_duration;
+
+    return total_time - time_passed;
 }
 
 const hoeveelBierMoetErIn = () => {
