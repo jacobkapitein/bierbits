@@ -19,6 +19,13 @@ div.kouwekast {
     min-height: 685px;
 }
 
+.koelkassieDicht {
+    max-height: 70vh;
+    max-width: 90vw;
+    min-width: 530px;
+    min-height: 685px;
+}
+
 .bierfleswrap {
     position: absolute;
     /* background-color: #ff000022; */

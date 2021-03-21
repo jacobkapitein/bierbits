@@ -41,3 +41,8 @@ const addVreugdewater = () => {
         $("#3").append(`<img class="vreugdewater" src="images/bierflesje.png" style="left: 11%; top: ${top}%; transform: rotate(${rotation}deg)" />`);
     }
 }
+
+const onHoverDicht = () => {
+    $(".dicht").css('display', 'none');
+    $(".open").css('display', 'block');
+}

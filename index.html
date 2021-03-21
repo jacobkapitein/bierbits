@@ -9,12 +9,17 @@
     <body>
         <h1>Wil je bier?</h1>
         <div class="kouwekast">
-            <img class="koelkassie" src="images/koelkast_open.png" />
-            <div id="1" class="bierfleswrap">
+            <div class="open" style="display: none;">
+                <img class="koelkassie" src="images/koelkast_open.png" />
+                <div id="1" class="bierfleswrap">
+                </div>
+                <div id="2" class="bierfleswrap">
+                </div>
+                <div id="3" class="bierfleswrap">
+                </div>
             </div>
-            <div id="2" class="bierfleswrap">
-            </div>
-            <div id="3" class="bierfleswrap">
+            <div class="dicht" onmouseover="onHoverDicht()" onmousedown="onHoverDicht()" >
+                <img class="koelkassieDicht" src="images/koelkast_dicht.png" />
             </div>
         </div>
 
